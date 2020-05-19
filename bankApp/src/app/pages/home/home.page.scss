@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+ion-content {  
+    #header {
+        width: 100vw;
+        height: 25.246305vh;
+        background: cornflowerblue;
+        color: white;
+        padding: 0 4.266661vw;
+
+        #showName {
+            font-size: 18px;
+            margin: 6.896551vh 0 0.738916vh 0;
+            font-weight: bold;
+        }
+        p {
+            margin: 0.738916vh 0;
+        }
+        h3 {
+            font-size: 2.955665vh;
+            font-weight: bold;
+        }
+    }
+    #card {
+        background-color: white;
+        padding: 2.463054vh 4.266661vw;
+        z-index: 3;
+        width: 100vw;
+        height: 66.502463vh;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-radius: 20px 20px 0 0;
+            
+        ion-col {
+            p {
+                font-weight: bold;
+                font-size: 1.166666em;
+            }
+        }
+
+        #slide-1 {
+            ion-grid {
+                margin: 0 0 2vh 0;
+                ion-row {
+                    margin-top: 2.955665vh;
+                    ion-icon {
+                        font-size: 2.955665vh;
+                        color: cornflowerblue;
+                    }
+                    p {
+                        font-size: 1em;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+        
+        #slide-2 {
+            #box {
+                margin: 2vh 0 4vh 0;
+                img {
+                    max-width: 100%;
+                    border-radius: 20px;
+                }
+            } 
+        }
+    }
+}  
+
+ion-footer {
+    z-index: 5;
+}

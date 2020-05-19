@@ -1,0 +1,50 @@
+.slide {
+    height: 100vh;
+    
+    .anh {
+        width: 100%;
+        height: 54.802955vh;
+        position: absolute;
+        top: 0;
+
+        img {
+        width: 100%;
+        }
+    }
+
+    .box {
+        background-color: white;
+        height: 45.197044vh;
+        position: absolute;
+        bottom: 3.694581vh;
+        border-radius: 25px 25px 0 0;
+        padding: 15% 3%;
+
+        h2 {
+            color: #3880ff;
+        }
+
+        p {
+            margin-bottom: 5vh;
+        }
+
+        ion-icon {
+            font-size: 50px;
+            color: #3880ff;
+        }
+    }
+}
+// .slide1 {
+//   background-image: url("../../../assets/image/Screenshot_20200518-223529-01.jpeg");
+// }
+
+// .slide2 {
+//   background-image: url("https://i.pinimg.com/originals/53/68/5c/53685c3d8a41f59f73d59fc43a871e95.jpg");
+// }
+
+// .slide3 {
+//   background-image: url("https://i.pinimg.com/originals/6e/5d/61/6e5d616f10f1cf0cf7ab097a0db6ac42.jpg");
+// }
+
+
+

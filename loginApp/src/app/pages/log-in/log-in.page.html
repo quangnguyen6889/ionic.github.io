@@ -1,0 +1,76 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="primary">
+            <ion-item>
+                <ion-label>Language</ion-label>
+                <ion-select (ionChange)="useLanguage(language)" [(ngModel)]="language">
+                    <ion-select-option value="english">English</ion-select-option>
+                    <ion-select-option value="vietnamese">Tiếng Việt</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <!-- CÁCH 2
+            <ion-button (click)="useEnglish()" fill="outline" color="primary">En</ion-button>
+            <ion-button (click)="useVietnamese()" fill="outline" color="danger">Vi</ion-button> -->
+        </ion-buttons>
+        <ion-title>{{ 'login.titleToolbar' | translate }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>{{ 'login.titleContent' | translate }}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <form>
+                <ion-row>
+                    <ion-col size="12">
+                        <ion-label for="exampleInputEmail1">{{'login.username' | translate}}</ion-label>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="12">
+                        <ion-input [(ngModel)]="username" name="a" type="email" class="form-control" id="InputEmail"
+                            aria-describedby="emailHelp" placeholder="{{'login.placeholderEmail' | translate}}">
+                        </ion-input>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="12">
+                        <ion-label id="emailHelp" class="form-text text-muted"></ion-label>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="12">
+                        <ion-label for="exampleInputPassword1">{{ 'login.password' | translate }}</ion-label>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="12">
+                        <ion-input [(ngModel)]="password" name="b" type="password" class="form-control"
+                            id="InputPassword" placeholder="{{'login.placeholderPassword' | translate}}">
+                        </ion-input>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="12">
+                        <ion-label id="passwordHelp" class="form-text text-muted"></ion-label>
+                    </ion-col>
+                </ion-row>
+            </form>
+            <ion-row>
+                <ion-col>
+                    <ion-button color="success" expand="block" (click)="goToHome()">
+                        {{ 'login.titleContent' | translate }}
+                    </ion-button>
+                </ion-col>
+                <ion-col>
+                    <ion-button expand="block" (click)="goToSignUp()">
+                        {{ 'signup.titleHeader' | translate }}
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

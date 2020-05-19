@@ -1,0 +1,32 @@
+{
+    "login": {
+        "username": "Username",
+        "password": "Password",
+        "titleToolbar": "Log in",
+        "titleContent": "Log in",
+        "labelUsername1": "Please enter username.",
+        "labelUsername2": "The username is incorrect",
+        "labelPassword1": "Please enter password",
+        "labelPassword2": "The password is incorrect",
+        "placeholderEmail": "Enter username",
+        "placeholderPassword": "Enter Password"
+    },
+    "home": {
+        "btnLogin": "Login",
+        "btnSignup": "Signup",
+        "titleHeader": "Home",
+        "titleContent": "ABC Bank",
+        "textContent": "Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean."
+    },
+    "signup": {
+        "titleHeader": "Sign up",
+        "titleContent": "Sign up free",
+        "emailAddress": "Email address"
+    },
+    "tab-bar": {
+        "home": "Home",
+        "logIn": "Log in",
+        "signUp": "Sign up",
+        "about": "About"
+    }
+}

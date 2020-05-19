@@ -1,0 +1,19 @@
+ion-grid {
+    padding: 0;
+    ion-row {
+        margin-top: 2.955665vh;
+        ion-col {
+            padding: 0;
+            text-align: center;
+            ion-icon {
+                font-size: 2.955665vh;
+                color: cornflowerblue;
+                
+            }
+            p {
+                font-size: 12px;
+                font-weight: normal;
+            }
+        }        
+    }
+}

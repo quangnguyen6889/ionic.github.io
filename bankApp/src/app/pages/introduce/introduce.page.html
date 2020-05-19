@@ -1,0 +1,47 @@
+<ion-content [fullscreen]="true">
+
+    <ion-slides pager="true" id="someElement" [options]="slideOpts">
+        <ion-slide class="slide slide1">
+            <div class="anh">
+                <img src="../../../assets/image/Screenshot_20200518-223529-01.jpeg" alt="">
+            </div>
+
+            <div class="box">
+                <h2>Thuận tiện, dễ sử dụng</h2>
+                <ion-row>
+                    <p>Cách đơn giản để quản lý dòng tiền, chuyển / nhận tiền nha chóng</p>
+                </ion-row>
+                <ion-icon name="chevron-forward-circle-sharp" (click)="next()"></ion-icon>
+            </div>
+        </ion-slide>
+
+        <ion-slide class="slide slide2">
+            <div class="anh">
+                <img src="../../../assets/image/Screenshot_20200518-223540-01.jpeg" alt="">
+            </div>
+
+            <div class="box">
+                <h2>Tiết kiệm online</h2>
+                <ion-row>
+                    <p>Tiết kiệm tiền trực tuyến giúp bạn có thêm thu nhập, tự tin chi tiêu</p>
+                </ion-row>
+                <ion-icon name="chevron-forward-circle-sharp" (click)="next()"></ion-icon>
+            </div>
+        </ion-slide>
+
+        <ion-slide class="slide slide3">
+            <div class="anh">
+                <img src="../../../assets/image/Screenshot_20200518-223549-01.jpeg" alt="">
+            </div>
+
+            <div class="box">
+                <h2>Bảo mật thông tin</h2>
+                <ion-row>
+                    <p>Tất cả thông tin người dùng sẽ được mã hóa và bảo mật ở mức cao nhất</p>
+                </ion-row>
+                <ion-button expand="block" (click)="goToLogin()">Bắt đầu</ion-button>
+            </div>
+        </ion-slide>
+    </ion-slides>
+
+</ion-content>

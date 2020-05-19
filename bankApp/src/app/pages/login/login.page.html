@@ -1,0 +1,56 @@
+<ion-content class="ion-no-border">
+  <div id="mot"></div>
+  <div id="card">
+    <ion-card>
+      <ion-card-header>
+        <ion-img [src]="image"></ion-img>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-input placeholder="User Name"></ion-input>
+        <ion-input placeholder="Password"></ion-input>
+        <ion-button color="dark" slot="start" expand="block" fill="clear" shape="round">
+          <ion-icon color="primary" name="finger-print-outline"></ion-icon>
+          Touch ID
+        </ion-button>
+        <ion-button id="btn-login" expand="block" (click)="goToHome()">
+          Đăng nhập
+        </ion-button>
+        <h4>Quên mật khẩu?</h4>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <!-- <ion-toolbar class="ion-no-border"> -->
+  <div id="bar">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="3">
+          <div>
+            <ion-icon name="qr-code-outline"></ion-icon>
+            <p>QR pay</p>
+          </div>
+        </ion-col>
+        <ion-col size="3">
+          <ion-icon name="business-outline"></ion-icon>
+          <p>ATM</p>
+        </ion-col>
+        <ion-col size="3">
+          <ion-icon name="cash-outline"></ion-icon>
+          <p>Đặt vé</p>
+        </ion-col>
+        <ion-col size="3">
+          <ion-icon name="call-outline"></ion-icon>
+          <p>Hỗ trợ</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <!-- </ion-toolbar> -->
+  <h4>Đăng ký tạo tài khoản</h4>
+  <ion-row>
+    <ion-col size="12"></ion-col>
+  </ion-row>
+</ion-footer>

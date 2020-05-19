@@ -1,0 +1,44 @@
+<ion-header class="btnSignUp">
+    <ion-toolbar>
+        <ion-buttons slot="start" (click)="goToHome()">
+            <ion-button>
+                <ion-icon name="arrow-back-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="secondary">
+            <ion-button (click)="useEnglish()" fill="clear" color="primary">Eng</ion-button>
+            <ion-button (click)="useVietnamese()" fill="clear" color="danger">Vie</ion-button>
+        </ion-buttons>
+        <ion-title>{{'signup.titleHeader' | translate }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>{{'signup.titleContent' | translate }}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">{{'signup.emailAddress' | translate }}</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="{{'login.placeholderEmail' | translate }}">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">{{'login.password' | translate }}</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1"
+                        placeholder="{{'login.placeholderPassword' | translate }}">
+                </div>
+            </form>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-row class="btnSignUp">
+        <ion-col size="12">
+            <ion-button color="primary">{{ 'signup.titleHeader' | translate }}</ion-button>
+        </ion-col>
+    </ion-row>
+
+</ion-content>

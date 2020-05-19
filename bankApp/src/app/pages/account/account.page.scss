@@ -1,0 +1,26 @@
+ion-content {
+    --background: cornflowerblue;
+}
+    #header {
+        // background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+        background: #3171e0;
+        
+        height: 20.689655vh;
+        ion-item {
+            --background: #3171e0;
+            padding-top: 5.4187192vh;
+            ion-label {
+                color:white;
+            }
+        }
+    }
+
+    ion-card {
+        ion-icon {
+            font-size: 1.55rem;
+            color: #3171e0;
+            margin-top: 0.8vh;
+        }
+    }
+
+

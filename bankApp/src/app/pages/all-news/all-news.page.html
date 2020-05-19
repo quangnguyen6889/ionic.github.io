@@ -1,0 +1,39 @@
+<ion-header>
+  <div></div>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text='' defaultHref="tab/tab/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <p>Tin tức</p>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let new of news" (click)="detail()">
+      <div id="card">
+        <img [src]="new.img" />
+        <p>{{ new.title }}</p>
+        <h6>09:00 - 19/03/2020</h6>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <div id="recentNews">
+    <ion-row>
+      <ion-col size="12">
+        <p style="font-size: 14px; font-weight: bold; margin: 0;">Tin tuc gan day</p>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let new Of news" (click)="detail(new)">
+      <ion-col size="4"><img [src]="new.img" /></ion-col>
+      <ion-col size="8" style="padding-left: 16px;">
+        <p>{{ new.title }}</p>
+        <h6>09:00 - 19/03/2020</h6>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

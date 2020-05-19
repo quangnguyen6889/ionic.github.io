@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="primary">
+            <ion-button (click)="useEnglish()" fill="clear" color="primary">Eng</ion-button>
+            <ion-button (click)="useVietnamese()" fill="clear" color="danger">Vie</ion-button>
+        </ion-buttons>
+        <ion-title>{{'home.titleHeader' | translate }}</ion-title>
+    </ion-toolbar>
+
+    <ion-content [fullscreen]="true">
+        <ion-row>
+            <ion-col size="12">
+                <h2>{{'home.titleContent' | translate }}</h2>
+            </ion-col>
+            <ion-col size="12">
+                <ion-img [src]="image"></ion-img>
+            </ion-col>
+            <ion-col size="12">
+                <p>{{'home.textContent' | translate }}</p>
+            </ion-col>
+        </ion-row>
+
+        <ion-button (click)="loginWithFB()">Log in with Facebook</ion-button>
+
+        <ion-card *ngIf="userData">
+            <ion-card-header>{{ userData.username }}</ion-card-header>
+        </ion-card>
+    </ion-content>

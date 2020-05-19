@@ -1,0 +1,32 @@
+{
+    "login": {
+        "username": "Tài khoản",
+        "password": "Mật khẩu",
+        "titleToolbar": "Đăng nhập",
+        "titleContent": "Đăng nhập",
+        "labelUsername1": "Vui lòng nhập tên tài khoản",
+        "labelUsername2": "Tên tài khoản không đúng",
+        "labelPassword1": "Vui lòng nhập mật khẩu",
+        "labelPassword2": "Mật khẩu không đúng",
+        "placeholderEmail": "Nhập tên tài khoản",
+        "placeholderPassword": "Nhập mật khẩu"
+    },
+    "home": {
+        "btnLogin": "Đăng nhập",
+        "btnSignup": "Đăng ký",
+        "titleHeader": "Trang chủ",
+        "titleContent": "Ngân hàng ABC",
+        "textContent": "Giữ gần trái tim của thiên nhiên ... và phá tan mọi thứ, một lần trong một lúc, và leo lên một ngọn núi hoặc dành một tuần trong rừng. Rửa sạch tinh thần của bạn."
+    },
+    "signup": {
+        "titleHeader": "Đăng ký",
+        "titleContent": "Đăng ký miễn phí",
+        "emailAddress": "Địa chỉ email"
+    },
+    "tab-bar": {
+        "home": "Trang chủ",
+        "logIn": "Đăng nhập",
+        "signUp": "Đăng ký",
+        "about": "Thông tin"
+    }
+}

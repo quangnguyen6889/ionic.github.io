@@ -1,0 +1,82 @@
+<ion-content>
+    <div id="header">
+        <div></div>
+        <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-back-button text='' defaultHref="tab/tab/home"></ion-back-button>
+            </ion-buttons>
+            <ion-title>
+                <p>Lịch sử giao dịch</p>
+            </ion-title>
+        </ion-toolbar>
+    </div>
+
+    <div id="card">
+        <ion-card>
+            <ion-row>
+                <ion-col size="6" style="border-right: 1px solid #eeeeee;">
+                    <ion-icon name="ellipse-sharp"></ion-icon>
+                    <span>Khoản thu</span>
+                    <h3>16.100.000</h3>
+                </ion-col>
+                <ion-col size="6" style="padding-left: 20px;">
+                    <ion-icon name="ellipse-sharp" style="color: #D03339;"></ion-icon>
+                    <span>Khoản chi</span>
+                    <h3>2.100.000</h3>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+    </div>
+
+    <div id="select">
+        <ion-row>
+            <ion-col size="4">
+                <ion-select value="5" okText="Okay" cancelText="Cancel">
+                    <ion-select-option value="1">Tháng 1</ion-select-option>
+                    <ion-select-option value="2">Tháng 2</ion-select-option>
+                    <ion-select-option value="3">Tháng 3</ion-select-option>
+                    <ion-select-option value="4">Tháng 4</ion-select-option>
+                    <ion-select-option value="5">Tháng 5</ion-select-option>
+                    <ion-select-option value="6">Tháng 6</ion-select-option>
+                    <ion-select-option value="7">Tháng 7</ion-select-option>
+                    <ion-select-option value="8">Tháng 8</ion-select-option>
+                    <ion-select-option value="9">Tháng 9</ion-select-option>
+                    <ion-select-option value="10">Tháng 10</ion-select-option>
+                    <ion-select-option value="11">Tháng 11</ion-select-option>
+                    <ion-select-option value="12">Tháng 12</ion-select-option>
+                </ion-select>
+            </ion-col>
+            <ion-col size="4">
+                <ion-select value="2020" okText="Okay" cancelText="Cancel">
+                    <ion-select-option value="2017">2017</ion-select-option>
+                    <ion-select-option value="2018">2018</ion-select-option>
+                    <ion-select-option value="2019">2019</ion-select-option>
+                    <ion-select-option value="2020">2020</ion-select-option>
+
+                </ion-select>
+            </ion-col>
+            <ion-col size="4">
+                <ion-select value="2" okText="Okay" cancelText="Cancel">
+                    <ion-select-option value="0">GD đến</ion-select-option>
+                    <ion-select-option value="1">GD đi</ion-select-option>
+                    <ion-select-option value="2">Tất cả</ion-select-option>
+                </ion-select>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div id="list-items">
+        <ion-item>
+            <ion-avatar slot="start">
+                <ion-icon name="arrow-up-sharp"></ion-icon>
+            </ion-avatar>
+            <ion-label>
+                <p>Hôm nay 12:45</p>
+                <h2 style="font-weight: bold">Từ: 1014686229</h2>
+            </ion-label>
+            <ion-label slot="end" style="text-align:right">
+                <p>+100,000 VND</p>
+            </ion-label>
+        </ion-item>
+    </div>
+
+</ion-content>
