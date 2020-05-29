@@ -65,8 +65,8 @@ ion-content {
 
     #select {
         width: 100vw;
-        height: 100px;
-        padding: 12px;
+        height: 40px;
+        padding: 0 12px;
         margin-top: 50px;
 ion-col {
     padding: 4px;
@@ -79,7 +79,10 @@ ion-col {
     }
     #list-items {
         padding: 16px;
+        
         ion-item {
+            padding: 10px 0;
+            --inner-padding-end: 0px;
             ion-avatar {
                 background-color: #f8f8f8;
                 border-radius: 4px;
@@ -89,7 +92,7 @@ ion-col {
                 ion-icon{
                     font-size: 18px;
                     font-weight: 900;
-                    color: #5077F7;
+                    
                 }
             }
             ion-label {
@@ -102,6 +105,12 @@ ion-col {
                     font-size: 14px;
                     font-weight: 600;
                     line-height: 21px;
+                }
+                h6 {
+                    font-size: 13px;
+                    font-weight: bold;
+                    line-height: 20px;
+                    
                 }
             }
         }

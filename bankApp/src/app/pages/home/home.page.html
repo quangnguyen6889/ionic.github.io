@@ -108,17 +108,9 @@
         </ion-row>
         <div id="slide-2">
             <ion-slides pager="true">
-                <ion-slide *ngFor="let img of jsondata">
-                    <!-- <ion-card>
-                        <ion-card-content>
-                            <ion-img [src]="img.img"></ion-img>
-                        </ion-card-content>
-                    </ion-card> -->
-                    <!-- <ion-row>
-                        <ion-col size="12"><img [src]="img.img"></img></ion-col>
-                    </ion-row> -->
+                <ion-slide *ngFor="let data of jsonData">
                     <div id="box">
-                        <img [src]="img.img" />
+                        <img [src]="data.img" />
                     </div>
                 </ion-slide>
             </ion-slides>

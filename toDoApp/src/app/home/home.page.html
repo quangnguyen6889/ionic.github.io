@@ -1,58 +1,54 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="secondary">
-    <ion-title>
-      Note App
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="secondary">
+        <ion-title>
+            Note App
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Note App</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">Note App</ion-title>
+        </ion-toolbar>
+    </ion-header>
 
-  <div id="container" style="font-size: 1.5em;">
-    <ion-list *ngIf="getData && getData.length">
-      <ion-item *ngFor="let item of getData">
-        <ion-label (click)='gotoDetail(item.name,"abcabc")'
-          >{{item.name}}</ion-label>
-      </ion-item>
+    <div id="container" style="font-size: 1.5em;">
+        <ion-list *ngIf="getData && getData.length">
+            <ion-item *ngFor="let item of getData">
+                <ion-label (click)='gotoDetail(item.name,"abcabc")'>{{item.name}}</ion-label>
+            </ion-item>
+        </ion-list>
+
+        <ion-item *ngIf="input == true">
+            <!-- <ion-label color="primary">Mô tả công việc</ion-label> -->
+            <ion-input placeholder="Nhập công việc" [(ngModel)]="addNew"></ion-input>
+            <ion-icon *ngIf="closeButton == true" name="close-circle" size="large" color="danger" (click)="hideInput()">
+            </ion-icon>
+        </ion-item>
+        <hr />
+        <ion-icon name="add-circle" size="large" color="primary" (click)="showInput()" (click)="showCloseButton()">
+        </ion-icon>
+        <ion-icon *ngIf="closeButton == true" name="checkmark-sharp" size="large" color="success"
+            (click)="saveData($event)">
+        </ion-icon>
+    </div>
+
+    <ion-list>
+        <ion-item *ngFor="let data of dataUser">
+            <ion-thumbnail slot="start">
+                <img src="{{data.picture.thumbnail}}" />
+            </ion-thumbnail>
+            <ion-label>
+                <h3>{{data.name.title}}, {{data.name.first}} {{data.name.last}}</h3>
+                <p>email: {{data.email}}</p>
+                <p>address: {{data.location.street.name}} {{data.location.city}}</p>
+            </ion-label>
+        </ion-item>
     </ion-list>
-
-    <ion-item *ngIf="input == true">
-      <!-- <ion-label color="primary">Mô tả công việc</ion-label> -->
-      <ion-input placeholder="Nhập công việc" [(ngModel)]="addNew"></ion-input>
-      <ion-icon
-        *ngIf="closeButton == true"
-        name="close-circle"
-        size="large"
-        color="danger"
-        (click)="hideInput()">
-      </ion-icon>
-    </ion-item>
-    <hr />
-    <ion-icon
-      name="add-circle"
-      size="large"
-      color="primary"
-      (click)="showInput()"
-      (click)="showCloseButton()"
-    >
-    </ion-icon>
-    <ion-icon
-      *ngIf="closeButton == true"
-      name="checkmark-sharp"
-      size="large"
-      color="success"
-      (click)="saveData($event)"
-    >
-    </ion-icon>
-  </div>
 </ion-content>
 
 <ion-footer>
-  <ion-button (click)="gotoAbout()">About</ion-button>
-  <ion-button color="success" (click)="gotoDetail()">Detail</ion-button>
+    <ion-button (click)="gotoAbout()">About</ion-button>
+    <ion-button color="success" (click)="gotoDetail()">Detail</ion-button>
 </ion-footer>

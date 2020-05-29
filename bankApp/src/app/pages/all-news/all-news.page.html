@@ -13,8 +13,8 @@
 <ion-content class="ion-padding">
 
   <ion-slides pager="true">
-    <ion-slide *ngFor="let new of news" (click)="detail()">
-      <div id="card">
+    <ion-slide *ngFor="let new of news" (click)="detail(new)">
+      <div class="card">
         <img [src]="new.img" />
         <p>{{ new.title }}</p>
         <h6>09:00 - 19/03/2020</h6>

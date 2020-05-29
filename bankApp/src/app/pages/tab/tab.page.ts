@@ -15,4 +15,7 @@ export class TabPage implements OnInit {
   ngOnInit() {
   }
 
+  gotoQR() {
+    this.router.navigate(['qr'])
+  }
 }

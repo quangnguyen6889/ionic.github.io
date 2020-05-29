@@ -11,35 +11,24 @@ import { Router } from '@angular/router';
 })
 export class HomePage implements OnInit {
     name = "Đỗ Quang Nguyên";
-    jsondata: any;
+    jsonData: any;
 
     constructor(
         public router: Router,
         public http: HttpClient,
         private modalController: ModalController
     ) {
-        this.http.get("assets/json/image.json").subscribe((data) => {
-            this.jsondata = data;
-            // console.log(typeof (JSON.sdatatringify()));
+        this.http.get("assets/json/image.json").subscribe((data) => {      /* Lấy dữ liệu từ file JSON */
+            this.jsonData = data;
             console.log(data);
         })
     }
 
-    ngOnInit() {
+    ngOnInit() { }
 
-    }
-    click() {
-        alert("asd")
-    }
-
-    getJSONdata() {
-
-    }
-
-    async allFunction() {
+    async allFunction() {                                                  /* Mở Modal Page */
         const modal = await this.modalController.create({
-            component: AllFunctionPage,
-            cssClass: "ModelPage"
+            component: AllFunctionPage
         });
         return await modal.present();
     }

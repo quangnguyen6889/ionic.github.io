@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-qr',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QrPage implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }
 
+  cancel() {
+    this.router.navigate(['tab/tab/home'])
+  }
 }

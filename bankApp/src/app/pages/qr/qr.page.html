@@ -1,9 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>QR</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+    <div></div>
+    <ion-toolbar>
+        <ion-buttons slot="start" (click)="cancel()">
+            <ion-icon name="close"></ion-icon>
+        </ion-buttons>
+        <ion-title>
+            <p>Quét mã QR</p>
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-icon name="help-circle"></ion-icon>
+        </ion-buttons>
+    </ion-toolbar>
+
+    <ion-item>
+        <ion-range min="20" max="80" step="2">
+            <ion-icon slot="start" name="remove-sharp"></ion-icon>
+            <ion-icon slot="end" name="add-sharp"></ion-icon>
+        </ion-range>
+    </ion-item>
+
+    <div id="qr">
+        <p>Di chuyển camera vào vùng có mã QR để quét</p>
+        <ion-icon name="qr-code-sharp"></ion-icon>
+    </div>
+
+    <div id="card"></div>
 
 </ion-content>

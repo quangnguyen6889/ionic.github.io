@@ -64,17 +64,21 @@
             </ion-col>
         </ion-row>
     </div>
+
     <div id="list-items">
-        <ion-item>
+        <ion-item class="ion-no-padding" lines="none" *ngFor="let item Of listItems">
             <ion-avatar slot="start">
-                <ion-icon name="arrow-up-sharp"></ion-icon>
+                <ion-icon *ngIf="item.type" name="arrow-up-sharp" style="color: #5077F7;"></ion-icon>
+                <ion-icon *ngIf="!item.type" name="arrow-down-sharp" style="color: #D03339;"></ion-icon>
             </ion-avatar>
             <ion-label>
-                <p>Hôm nay 12:45</p>
-                <h2 style="font-weight: bold">Từ: 1014686229</h2>
+                <p>{{ item.time }}</p>
+                <h2 *ngIf="item.type" style="font-weight: bold">Từ: {{ item.address }}</h2>
+                <h2 *ngIf="!item.type" style="font-weight: bold">Đến: {{ item.address }}</h2>
             </ion-label>
-            <ion-label slot="end" style="text-align:right">
-                <p>+100,000 VND</p>
+            <ion-label slot="end" style="text-align:right;">
+                <h6 *ngIf="item.type" style="color: #5077F7;">+{{ item.amount }}</h6>
+                <h6 *ngIf="!item.type" style="color: #D03339;">-{{ item.amount }}</h6>
             </ion-label>
         </ion-item>
     </div>

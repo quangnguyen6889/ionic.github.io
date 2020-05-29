@@ -2,52 +2,72 @@ import { Component, ɵɵpipeBind2 } from "@angular/core";
 import { Storage } from "@ionic/storage";
 import { NavController } from "@ionic/angular";
 import { NavigationExtras, Router } from "@angular/router";
+import { ApiService } from './../api.service';
 
 @Component({
-  selector: "app-home",
-  templateUrl: "home.page.html",
-  styleUrls: ["home.page.scss"],
+    selector: "app-home",
+    templateUrl: "home.page.html",
+    styleUrls: ["home.page.scss"],
 })
 export class HomePage {
-  public addNew: string = "";
-  public input: boolean = false;
-  public closeButton: boolean = false;
-  public getData: any[] = [];
+    public addNew: string = "";
+    public input: boolean = false;
+    public closeButton: boolean = false;
+    public getData: any[] = [];
+    dataUser: any;
 
-  constructor(public navController: NavController, private router: Router) {}
+    constructor(
+        public api: ApiService,
+        public navController: NavController,
+        private router: Router
+    ) { }
 
-  showInput() {
-    if (!this.input) {
-      this.input = true;
+    ngOnInit() {
+        this.getDataUser();
     }
-  }
 
-  hideInput() {
-    if (this.input) {
-      this.input = false;
+    async getDataUser() {
+        await this.api.getDataUser().subscribe(res => {
+            console.log(res);
+            this.dataUser = res.results;
+            console.log(this.dataUser);
+        }, err => {
+            console.log(err);
+        });
     }
-  }
 
-  showCloseButton() {
-    if (!this.closeButton) {
-      this.closeButton = true;
+    showInput() {
+        if (!this.input) {
+            this.input = true;
+        }
     }
-  }
 
-  saveData(event) {
-    this.getData.push({ name: this.addNew });
-    this.addNew = "";
-  }
+    hideInput() {
+        if (this.input) {
+            this.input = false;
+        }
+    }
 
-  gotoDetail(valuevalue, vl2vl2) {
-    const navigationExtras: NavigationExtras = {
-      queryParams: { value: valuevalue, valuevalue: vl2vl2 },
-    };
-    this.router.navigate(["detail"], navigationExtras);
-    // this.router.navigateByUrl(link);
-  }
+    showCloseButton() {
+        if (!this.closeButton) {
+            this.closeButton = true;
+        }
+    }
 
-  gotoAbout() {
-    this.router.navigate(["about"]);
-  }
+    saveData(event) {
+        this.getData.push({ name: this.addNew });
+        this.addNew = "";
+    }
+
+    gotoDetail(valuevalue, vl2vl2) {
+        const navigationExtras: NavigationExtras = {
+            queryParams: { value: valuevalue, valuevalue: vl2vl2 },
+        };
+        this.router.navigate(["detail"], navigationExtras);
+        // this.router.navigateByUrl(link);
+    }
+
+    gotoAbout() {
+        this.router.navigate(["about"]);
+    }
 }
