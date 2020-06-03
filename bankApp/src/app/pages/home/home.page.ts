@@ -28,7 +28,8 @@ export class HomePage implements OnInit {
 
     async allFunction() {                                                  /* Mở Modal Page */
         const modal = await this.modalController.create({
-            component: AllFunctionPage
+            component: AllFunctionPage,
+            cssClass: 'custom-modal'
         });
         return await modal.present();
     }
