@@ -54,14 +54,14 @@ export class HomePage {
         }
     }
 
-    saveData(event) {
+    saveData() {
         this.getData.push({ name: this.addNew });
         this.addNew = "";
     }
 
-    gotoDetail(valuevalue, vl2vl2) {
+    gotoDetail(value) {
         const navigationExtras: NavigationExtras = {
-            queryParams: { value: valuevalue, valuevalue: vl2vl2 },
+            queryParams: { key: value },
         };
         this.router.navigate(["detail"], navigationExtras);
         // this.router.navigateByUrl(link);

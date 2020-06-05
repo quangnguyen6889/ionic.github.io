@@ -16,10 +16,11 @@ export class DetailPage implements OnInit {
     ngOnInit() {
 
         this.activatedRoute.queryParams.subscribe(param => {
+            debugger
             if (param) {
-                this.valuevalue = param.value;
+                this.valuevalue = param.key;
 
-                debugger
+
             }
         });
     }

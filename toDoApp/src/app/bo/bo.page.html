@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Trang bố</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+    <ion-list>
+        <ion-item *ngFor="let sanPham of listSanPham" (click)="sangTrangCon(sanPham)">
+            <ion-thumbnail slot="start">
+                <!-- <img src="{{sanPham.hinhAnh}}" /> -->
+            </ion-thumbnail>
+            <ion-label>
+                <h3>{{ sanPham.ten }}</h3>
+                <!-- <p>{{ sanPham.gia }}</p> -->
+            </ion-label>
+        </ion-item>
+    </ion-list>
+
+    <ion-input type="text" [(ngModel)]="text" color="primary"></ion-input>
+    <h4>{{text}}</h4>
+
+    <ion-button>
+        Lưu dữ liệu
+    </ion-button>
+</ion-content>

@@ -16,7 +16,7 @@
     <div id="container" style="font-size: 1.5em;">
         <ion-list *ngIf="getData && getData.length">
             <ion-item *ngFor="let item of getData">
-                <ion-label (click)='gotoDetail(item.name,"abcabc")'>{{item.name}}</ion-label>
+                <ion-label (click)='gotoDetail(item.name)'>{{item.name}}</ion-label>
             </ion-item>
         </ion-list>
 
@@ -29,12 +29,11 @@
         <hr />
         <ion-icon name="add-circle" size="large" color="primary" (click)="showInput()" (click)="showCloseButton()">
         </ion-icon>
-        <ion-icon *ngIf="closeButton == true" name="checkmark-sharp" size="large" color="success"
-            (click)="saveData($event)">
+        <ion-icon *ngIf="closeButton == true" name="checkmark-sharp" size="large" color="success" (click)="saveData()">
         </ion-icon>
     </div>
 
-    <ion-list>
+    <!-- <ion-list>
         <ion-item *ngFor="let data of dataUser">
             <ion-thumbnail slot="start">
                 <img src="{{data.picture.thumbnail}}" />
@@ -45,7 +44,7 @@
                 <p>address: {{data.location.street.name}} {{data.location.city}}</p>
             </ion-label>
         </ion-item>
-    </ion-list>
+    </ion-list> -->
 </ion-content>
 
 <ion-footer>
